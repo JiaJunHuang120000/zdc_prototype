@@ -1,0 +1,6 @@
+/home/jiajun/eic/local/lib/libzdc_prototype.components
+/home/jiajun/eic/local/lib/libzdc_prototype.so
+/home/jiajun/eic/local/share/zdc_prototype/compact/colors.xml
+/home/jiajun/eic/local/share/zdc_prototype/compact/materials.xml
+/home/jiajun/eic/local/share/zdc_prototype/compact/definitions.xml
+/home/jiajun/eic/local/share/zdc_prototype/zdc_prototype.xml

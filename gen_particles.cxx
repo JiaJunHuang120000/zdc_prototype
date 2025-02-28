@@ -25,9 +25,9 @@ using namespace HepMC3;
 void gen_particles(
                     int n_events = 10000, 
                     const char* out_fname = "gen_particles.hepmc", 
-                    TString particle_name = "proton",
-                    double th_min = 90., // Minimum polar angle, in degrees
-		    double th_max = 90., // Maximum polar angle, in degrees
+                    TString particle_name = "mu-",
+                    double th_min = 0., // Minimum polar angle, in degrees
+		    double th_max = 0.23, // Maximum polar angle, in degrees
 		    double phi_min = 0., // Minimum azimuthal angle, in degrees
                     double phi_max = 360., // Maximum azimuthal angle, in degrees
                     double p = 4.,  // Momentum in GeV/c
@@ -45,7 +45,7 @@ void gen_particles(
   TDatabasePDG *pdg = new TDatabasePDG();
   TParticlePDG *particle = pdg->GetParticle(particle_name);
   const double mass = particle->Mass();
-  const int pdgID = 2212;//particle->PdgCode();
+  const int pdgID = 13;//particle->PdgCode();
 
   for (events_parsed = 0; events_parsed < n_events; events_parsed++) {
 

@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+2b6fc2c3244a6fc1f3e055606079bccc CMakeFiles/Components_zdc_prototype
+9a8f64979c72b6490944611072015c84 libzdc_prototype.components

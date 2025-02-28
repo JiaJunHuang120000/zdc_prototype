@@ -1,0 +1,8 @@
+/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/zdc_prototype.dir
+/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/Components_zdc_prototype.dir
+/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/edit_cache.dir
+/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/rebuild_cache.dir
+/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/list_install_components.dir
+/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/install.dir
+/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/install/local.dir
+/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/install/strip.dir

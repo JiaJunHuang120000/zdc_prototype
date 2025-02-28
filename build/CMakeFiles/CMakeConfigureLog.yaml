@@ -1,0 +1,564 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:3 (PROJECT)"
+    message: |
+      The system is: Linux - 5.15.0-125-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (PROJECT)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/clang++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is Clang, found in:
+        /home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/3.30.5/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (PROJECT)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-fNcppb"
+      binary: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-fNcppb"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps-16"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-fNcppb'
+        
+        Run Build Command(s): /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E env VERBOSE=1 /opt/local/bin/gmake -f Makefile cmTC_2f0cb/fast
+        /opt/local/bin/gmake  -f CMakeFiles/cmTC_2f0cb.dir/build.make CMakeFiles/cmTC_2f0cb.dir/build
+        gmake[1]: Entering directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-fNcppb'
+        Building CXX object CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/clang++   -v -MD -MT CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o -c /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
+        Debian clang version 16.0.6 (15~deb12u1)
+        Target: x86_64-pc-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+        Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         (in-process)
+         "/usr/lib/llvm-16/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-fNcppb -resource-dir /usr/lib/llvm-16/lib/clang/16 -dependency-file CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -I/opt/local/include/eigen3 -c-isystem /opt/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward -internal-isystem /usr/lib/llvm-16/lib/clang/16/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-fNcppb -ferror-limit 19 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 16.0.6 based upon LLVM 16.0.6 default target x86_64-pc-linux-gnu
+        ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/local/include/eigen3
+         /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12
+         /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12
+         /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward
+         /usr/lib/llvm-16/lib/clang/16/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Linking CXX executable cmTC_2f0cb
+        /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f0cb.dir/link.txt --verbose=1
+        /usr/bin/clang++  -v -Wl,-v -rdynamic CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2f0cb
+        Debian clang version 16.0.6 (15~deb12u1)
+        Target: x86_64-pc-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+        Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         "/usr/bin/ld" -pie -export-dynamic --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_2f0cb /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/lib -L/usr/lib -L/opt/local/lib -v CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o /lib/x86_64-linux-gnu/crtn.o
+        GNU ld (GNU Binutils for Debian) 2.40
+        gmake[1]: Leaving directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-fNcppb'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (PROJECT)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/local/include/eigen3]
+          add: [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12]
+          add: [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12]
+          add: [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward]
+          add: [/usr/lib/llvm-16/lib/clang/16/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/opt/local/include/eigen3] ==> [/opt/local/include/eigen3]
+        collapse include dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12] ==> [/usr/include/c++/12]
+        collapse include dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12] ==> [/usr/include/x86_64-linux-gnu/c++/12]
+        collapse include dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward] ==> [/usr/include/c++/12/backward]
+        collapse include dir [/usr/lib/llvm-16/lib/clang/16/include] ==> [/usr/lib/llvm-16/lib/clang/16/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/opt/local/include/eigen3;/usr/include/c++/12;/usr/include/x86_64-linux-gnu/c++/12;/usr/include/c++/12/backward;/usr/lib/llvm-16/lib/clang/16/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (PROJECT)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-fNcppb']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E env VERBOSE=1 /opt/local/bin/gmake -f Makefile cmTC_2f0cb/fast]
+        ignore line: [/opt/local/bin/gmake  -f CMakeFiles/cmTC_2f0cb.dir/build.make CMakeFiles/cmTC_2f0cb.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-fNcppb']
+        ignore line: [Building CXX object CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/clang++   -v -MD -MT CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o -c /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Debian clang version 16.0.6 (15~deb12u1)]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12]
+        ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [ (in-process)]
+        ignore line: [ "/usr/lib/llvm-16/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-fNcppb -resource-dir /usr/lib/llvm-16/lib/clang/16 -dependency-file CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -I/opt/local/include/eigen3 -c-isystem /opt/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward -internal-isystem /usr/lib/llvm-16/lib/clang/16/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-fNcppb -ferror-limit 19 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 16.0.6 based upon LLVM 16.0.6 default target x86_64-pc-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/local/include/eigen3]
+        ignore line: [ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12]
+        ignore line: [ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12]
+        ignore line: [ /usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward]
+        ignore line: [ /usr/lib/llvm-16/lib/clang/16/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Linking CXX executable cmTC_2f0cb]
+        ignore line: [/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f0cb.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/clang++  -v -Wl -v -rdynamic CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2f0cb]
+        ignore line: [Debian clang version 16.0.6 (15~deb12u1)]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12]
+        ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/12]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        link line: [ "/usr/bin/ld" -pie -export-dynamic --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_2f0cb /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/lib -L/usr/lib -L/opt/local/lib -v CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o /lib/x86_64-linux-gnu/crtn.o]
+          arg [/usr/bin/ld] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_2f0cb] ==> ignore
+          arg [/lib/x86_64-linux-gnu/Scrt1.o] ==> obj [/lib/x86_64-linux-gnu/Scrt1.o]
+          arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
+          arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o] ==> obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o]
+          arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/12] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/12]
+          arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [-L/opt/local/lib] ==> dir [/opt/local/lib]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_2f0cb.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o] ==> obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o]
+          arg [/lib/x86_64-linux-gnu/crtn.o] ==> obj [/lib/x86_64-linux-gnu/crtn.o]
+        linker tool for 'CXX': /usr/bin/ld
+        collapse obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtbeginS.o] ==> [/usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o]
+        collapse obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/crtendS.o] ==> [/usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o]
+        collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/12] ==> [/usr/lib/gcc/x86_64-linux-gnu/12]
+        collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        collapse library dir [/opt/local/lib] ==> [/opt/local/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/lib/x86_64-linux-gnu/Scrt1.o;/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o;/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/12;/usr/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/lib;/usr/lib;/opt/local/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (PROJECT)"
+    message: |
+      Running the CXX compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld (GNU Binutils for Debian) 2.40
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/FindThreads.cmake:99 (CHECK_CXX_SOURCE_COMPILES)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/lib/cmake/Geant4/PTL/PTLConfig.cmake:56 (find_dependency)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/lib/cmake/Geant4/Geant4Config.cmake:286 (find_dependency)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/cmake/DD4hepConfig.cmake:57 (find_dependency)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-oK7NUu"
+      binary: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-oK7NUu"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps-16"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/local/lib/cmake/Geant4/Modules;/opt/local/cmake;/opt/local/cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-oK7NUu'
+        
+        Run Build Command(s): /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E env VERBOSE=1 /opt/local/bin/gmake -f Makefile cmTC_54b35/fast
+        /opt/local/bin/gmake  -f CMakeFiles/cmTC_54b35.dir/build.make CMakeFiles/cmTC_54b35.dir/build
+        gmake[1]: Entering directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-oK7NUu'
+        Building CXX object CMakeFiles/cmTC_54b35.dir/src.cxx.o
+        /usr/bin/clang++ -DCMAKE_HAVE_LIBC_PTHREAD   -MD -MT CMakeFiles/cmTC_54b35.dir/src.cxx.o -MF CMakeFiles/cmTC_54b35.dir/src.cxx.o.d -o CMakeFiles/cmTC_54b35.dir/src.cxx.o -c /home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-oK7NUu/src.cxx
+        Linking CXX executable cmTC_54b35
+        /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54b35.dir/link.txt --verbose=1
+        /usr/bin/clang++ CMakeFiles/cmTC_54b35.dir/src.cxx.o -o cmTC_54b35
+        gmake[1]: Leaving directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-oK7NUu'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/FindX11.cmake:693 (check_library_exists)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/lib/cmake/Geant4/Geant4Config.cmake:384 (find_dependency)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/cmake/DD4hepConfig.cmake:57 (find_dependency)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for XOpenDisplay in /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/libx11-1.8.10-yq25amam6irqz7mgfdluzq5qxpuf2ahy/lib/libX11.so;/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/libxext-1.3.6-gpmt4ge6s245fqhruycmdsdu7ca5yrtm/lib/libXext.so"
+    directories:
+      source: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-PSqwSE"
+      binary: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-PSqwSE"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps-16"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/local/lib/cmake/Geant4/Modules;/opt/local/cmake;/opt/local/cmake"
+    buildResult:
+      variable: "X11_LIB_X11_SOLO"
+      cached: true
+      stdout: |
+        Change Dir: '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-PSqwSE'
+        
+        Run Build Command(s): /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E env VERBOSE=1 /opt/local/bin/gmake -f Makefile cmTC_b2123/fast
+        /opt/local/bin/gmake  -f CMakeFiles/cmTC_b2123.dir/build.make CMakeFiles/cmTC_b2123.dir/build
+        gmake[1]: Entering directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-PSqwSE'
+        Building CXX object CMakeFiles/cmTC_b2123.dir/CheckFunctionExists.cxx.o
+        /usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -MD -MT CMakeFiles/cmTC_b2123.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_b2123.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_b2123.dir/CheckFunctionExists.cxx.o -c /home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-PSqwSE/CheckFunctionExists.cxx
+        Linking CXX executable cmTC_b2123
+        /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2123.dir/link.txt --verbose=1
+        /usr/bin/clang++  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_b2123.dir/CheckFunctionExists.cxx.o -o cmTC_b2123   -L/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/libx11-1.8.10-yq25amam6irqz7mgfdluzq5qxpuf2ahy/lib  -Wl,-rpath,/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/libx11-1.8.10-yq25amam6irqz7mgfdluzq5qxpuf2ahy/lib:/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/libxext-1.3.6-gpmt4ge6s245fqhruycmdsdu7ca5yrtm/lib /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/libx11-1.8.10-yq25amam6irqz7mgfdluzq5qxpuf2ahy/lib/libX11.so /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/libxext-1.3.6-gpmt4ge6s245fqhruycmdsdu7ca5yrtm/lib/libXext.so
+        gmake[1]: Leaving directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-PSqwSE'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/FindX11.cmake:708 (check_function_exists)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/lib/cmake/Geant4/Geant4Config.cmake:384 (find_dependency)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/cmake/DD4hepConfig.cmake:57 (find_dependency)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for gethostbyname"
+    directories:
+      source: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-8m4oev"
+      binary: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-8m4oev"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps-16"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/local/lib/cmake/Geant4/Modules;/opt/local/cmake;/opt/local/cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_GETHOSTBYNAME"
+      cached: true
+      stdout: |
+        Change Dir: '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-8m4oev'
+        
+        Run Build Command(s): /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E env VERBOSE=1 /opt/local/bin/gmake -f Makefile cmTC_c357d/fast
+        /opt/local/bin/gmake  -f CMakeFiles/cmTC_c357d.dir/build.make CMakeFiles/cmTC_c357d.dir/build
+        gmake[1]: Entering directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-8m4oev'
+        Building CXX object CMakeFiles/cmTC_c357d.dir/CheckFunctionExists.cxx.o
+        /usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=gethostbyname -MD -MT CMakeFiles/cmTC_c357d.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_c357d.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_c357d.dir/CheckFunctionExists.cxx.o -c /home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-8m4oev/CheckFunctionExists.cxx
+        Linking CXX executable cmTC_c357d
+        /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c357d.dir/link.txt --verbose=1
+        /usr/bin/clang++  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_c357d.dir/CheckFunctionExists.cxx.o -o cmTC_c357d
+        gmake[1]: Leaving directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-8m4oev'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/FindX11.cmake:722 (check_function_exists)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/lib/cmake/Geant4/Geant4Config.cmake:384 (find_dependency)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/cmake/DD4hepConfig.cmake:57 (find_dependency)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for connect"
+    directories:
+      source: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-WNO8QW"
+      binary: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-WNO8QW"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps-16"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/local/lib/cmake/Geant4/Modules;/opt/local/cmake;/opt/local/cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_CONNECT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-WNO8QW'
+        
+        Run Build Command(s): /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E env VERBOSE=1 /opt/local/bin/gmake -f Makefile cmTC_7dcb2/fast
+        /opt/local/bin/gmake  -f CMakeFiles/cmTC_7dcb2.dir/build.make CMakeFiles/cmTC_7dcb2.dir/build
+        gmake[1]: Entering directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-WNO8QW'
+        Building CXX object CMakeFiles/cmTC_7dcb2.dir/CheckFunctionExists.cxx.o
+        /usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=connect -MD -MT CMakeFiles/cmTC_7dcb2.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_7dcb2.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_7dcb2.dir/CheckFunctionExists.cxx.o -c /home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-WNO8QW/CheckFunctionExists.cxx
+        Linking CXX executable cmTC_7dcb2
+        /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7dcb2.dir/link.txt --verbose=1
+        /usr/bin/clang++  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_7dcb2.dir/CheckFunctionExists.cxx.o -o cmTC_7dcb2
+        gmake[1]: Leaving directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-WNO8QW'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/FindX11.cmake:731 (check_function_exists)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/lib/cmake/Geant4/Geant4Config.cmake:384 (find_dependency)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/cmake/DD4hepConfig.cmake:57 (find_dependency)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for remove"
+    directories:
+      source: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-u8IQfW"
+      binary: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-u8IQfW"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps-16"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/local/lib/cmake/Geant4/Modules;/opt/local/cmake;/opt/local/cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_REMOVE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-u8IQfW'
+        
+        Run Build Command(s): /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E env VERBOSE=1 /opt/local/bin/gmake -f Makefile cmTC_e0b7d/fast
+        /opt/local/bin/gmake  -f CMakeFiles/cmTC_e0b7d.dir/build.make CMakeFiles/cmTC_e0b7d.dir/build
+        gmake[1]: Entering directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-u8IQfW'
+        Building CXX object CMakeFiles/cmTC_e0b7d.dir/CheckFunctionExists.cxx.o
+        /usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=remove -MD -MT CMakeFiles/cmTC_e0b7d.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_e0b7d.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_e0b7d.dir/CheckFunctionExists.cxx.o -c /home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-u8IQfW/CheckFunctionExists.cxx
+        Linking CXX executable cmTC_e0b7d
+        /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e0b7d.dir/link.txt --verbose=1
+        /usr/bin/clang++  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_e0b7d.dir/CheckFunctionExists.cxx.o -o cmTC_e0b7d
+        gmake[1]: Leaving directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-u8IQfW'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/FindX11.cmake:740 (check_function_exists)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/lib/cmake/Geant4/Geant4Config.cmake:384 (find_dependency)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/cmake/DD4hepConfig.cmake:57 (find_dependency)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for shmat"
+    directories:
+      source: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-0NtBJk"
+      binary: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-0NtBJk"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps-16"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/local/lib/cmake/Geant4/Modules;/opt/local/cmake;/opt/local/cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_SHMAT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-0NtBJk'
+        
+        Run Build Command(s): /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E env VERBOSE=1 /opt/local/bin/gmake -f Makefile cmTC_48d55/fast
+        /opt/local/bin/gmake  -f CMakeFiles/cmTC_48d55.dir/build.make CMakeFiles/cmTC_48d55.dir/build
+        gmake[1]: Entering directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-0NtBJk'
+        Building CXX object CMakeFiles/cmTC_48d55.dir/CheckFunctionExists.cxx.o
+        /usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=shmat -MD -MT CMakeFiles/cmTC_48d55.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_48d55.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_48d55.dir/CheckFunctionExists.cxx.o -c /home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-0NtBJk/CheckFunctionExists.cxx
+        Linking CXX executable cmTC_48d55
+        /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48d55.dir/link.txt --verbose=1
+        /usr/bin/clang++  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_48d55.dir/CheckFunctionExists.cxx.o -o cmTC_48d55
+        gmake[1]: Leaving directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-0NtBJk'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/FindX11.cmake:750 (check_library_exists)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/lib/cmake/Geant4/Geant4Config.cmake:384 (find_dependency)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/cmake/DD4hepConfig.cmake:57 (find_dependency)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for IceConnectionNumber in ICE"
+    directories:
+      source: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-J8GRez"
+      binary: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-J8GRez"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps-16"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/local/lib/cmake/Geant4/Modules;/opt/local/cmake;/opt/local/cmake"
+    buildResult:
+      variable: "CMAKE_LIB_ICE_HAS_ICECONNECTIONNUMBER"
+      cached: true
+      stdout: |
+        Change Dir: '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-J8GRez'
+        
+        Run Build Command(s): /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E env VERBOSE=1 /opt/local/bin/gmake -f Makefile cmTC_98e93/fast
+        /opt/local/bin/gmake  -f CMakeFiles/cmTC_98e93.dir/build.make CMakeFiles/cmTC_98e93.dir/build
+        gmake[1]: Entering directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-J8GRez'
+        Building CXX object CMakeFiles/cmTC_98e93.dir/CheckFunctionExists.cxx.o
+        /usr/bin/clang++   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -MD -MT CMakeFiles/cmTC_98e93.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_98e93.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_98e93.dir/CheckFunctionExists.cxx.o -c /home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-J8GRez/CheckFunctionExists.cxx
+        Linking CXX executable cmTC_98e93
+        /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98e93.dir/link.txt --verbose=1
+        /usr/bin/clang++  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_98e93.dir/CheckFunctionExists.cxx.o -o cmTC_98e93   -L/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/libx11-1.8.10-yq25amam6irqz7mgfdluzq5qxpuf2ahy/lib  -Wl,-rpath,/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/libx11-1.8.10-yq25amam6irqz7mgfdluzq5qxpuf2ahy/lib -lICE
+        gmake[1]: Leaving directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-J8GRez'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/qt-base-6.7.2-x662ov34kl7xeyzfim2zxtav7dqi4s6h/lib/cmake/Qt6/FindWrapAtomic.cmake:36 (check_cxx_source_compiles)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/qt-base-6.7.2-x662ov34kl7xeyzfim2zxtav7dqi4s6h/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/qt-base-6.7.2-x662ov34kl7xeyzfim2zxtav7dqi4s6h/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:33 (_qt_internal_find_third_party_dependencies)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/qt-base-6.7.2-x662ov34kl7xeyzfim2zxtav7dqi4s6h/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:45 (include)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/lib/cmake/Geant4/Geant4Config.cmake:394 (find_dependency)"
+      - "/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/opt/local/cmake/DD4hepConfig.cmake:57 (find_dependency)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Performing Test HAVE_STDATOMIC"
+    directories:
+      source: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-zuaZXh"
+      binary: "/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-zuaZXh"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps-16"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/local/lib/cmake/Geant4/Modules;/opt/local/cmake;/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/qt-base-6.7.2-x662ov34kl7xeyzfim2zxtav7dqi4s6h/lib/cmake/Qt6;/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/qt-base-6.7.2-x662ov34kl7xeyzfim2zxtav7dqi4s6h/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/qt-base-6.7.2-x662ov34kl7xeyzfim2zxtav7dqi4s6h/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_STDATOMIC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-zuaZXh'
+        
+        Run Build Command(s): /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E env VERBOSE=1 /opt/local/bin/gmake -f Makefile cmTC_70528/fast
+        /opt/local/bin/gmake  -f CMakeFiles/cmTC_70528.dir/build.make CMakeFiles/cmTC_70528.dir/build
+        gmake[1]: Entering directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-zuaZXh'
+        Building CXX object CMakeFiles/cmTC_70528.dir/src.cxx.o
+        /usr/bin/clang++ -DHAVE_STDATOMIC   -MD -MT CMakeFiles/cmTC_70528.dir/src.cxx.o -MF CMakeFiles/cmTC_70528.dir/src.cxx.o.d -o CMakeFiles/cmTC_70528.dir/src.cxx.o -c /home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-zuaZXh/src.cxx
+        Linking CXX executable cmTC_70528
+        /opt/software/linux-debian12-x86_64_v2/gcc-12.2.0/cmake-3.30.5-a2ocw63g2jonxudggjf73vx5zajgomm6/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70528.dir/link.txt --verbose=1
+        /usr/bin/clang++ CMakeFiles/cmTC_70528.dir/src.cxx.o -o cmTC_70528
+        gmake[1]: Leaving directory '/home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/CMakeFiles/CMakeScratch/TryCompile-zuaZXh'
+        
+      exitCode: 0
+...

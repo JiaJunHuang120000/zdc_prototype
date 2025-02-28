@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_zdc_prototype_FILE /home/jiajun/testing_zdc_prototype_offsets/jay/zdc_prototype/build/libzdc_prototype.so)
+set(__QT_DEPLOY_TARGET_zdc_prototype_TYPE SHARED_LIBRARY)
