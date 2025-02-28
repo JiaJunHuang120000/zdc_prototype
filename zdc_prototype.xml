@@ -74,12 +74,10 @@
     <documentation>
       #### Material Thicknesses
     </documentation>
-    <constant name="ZDCPrototype_AirThickness"                  value="0.02*cm"/>
     <constant name="ZDCPrototype_AbsorberThickness"             value="2*cm"/>
-    <constant name="ZDCPrototype_ScintillatorCoverThickness"    value="0.04*cm"/>
-    <constant name="ZDCPrototype_PolystyreneThickness"          value="0.30*cm"/>
-    <constant name="ZDCPrototype_PCBThickness"                  value="0.08*cm"/>
-    <constant name="ZDCPrototype_ESRFoilThickness"              value="0.015*cm"/>
+    <constant name="ZDCPrototype_PolystyreneThickness"          value="0.55*cm"/>
+    <constant name="ZDCPrototype_PCBThickness"                  value="0.16*cm"/>
+    <constant name="ZDCPrototype_ESRFoilThickness"              value="0.0006*cm"/>
 
     <documentation>
       - ZDC N Layers and computed Thickness
@@ -88,17 +86,32 @@
     <constant name="ZDCPrototype_SingleLayerThickness"
       value="ZDCPrototype_AbsorberThickness +
              ZDCPrototype_PolystyreneThickness +
-             ZDCPrototype_PCBThickness+ZDCPrototype_ESRFoilThickness*2+
-             2*ZDCPrototype_AirThickness+ZDCPrototype_ScintillatorCoverThickness"
+             ZDCPrototype_PCBThickness+ZDCPrototype_ESRFoilThickness*2"
+      />
+
+    <constant name="ZDCPrototype_TileThickness"
+      value="ZDCPrototype_PolystyreneThickness +
+             ZDCPrototype_ESRFoilThickness*2"
+      />
+    <constant name="ZDCPrototype_Layer_NSteelRepeat" value="59"/>
+    <constant name="ZDCPrototype_PolystyreneWidth" value= "24.4*cm"/>
+    <constant name="ZDCPrototype_PolystyreneHeight" value= "24.4*cm"/>
+    <constant name="ZDCPrototype_width" value= "28.8*cm"/>
+    <constant name="ZDCPrototype_height" value= "29.4*cm"/>
+    <constant name="ZDCPrototype_length" value= "ZDCPrototype_SingleLayerThickness*ZDCPrototype_Layer_NSteelRepeat+ZDCPrototype_Layer_NSteelRepeat+ZDCPrototype_AbsorberThickness"/>
+
+
+    <documentation>
+      - ZDC N Layers and computed Thickness
+    </documentation>
+
+   
+    <constant name="ZDCPrototype_FrontFace"
+      value="ZDCPrototype_PolystyreneThickness +
+             ZDCPrototype_PCBThickness+ZDCPrototype_ESRFoilThickness*2"
       />
 
     <constant name="ZDCPrototype_BackplateThickness" value="ZDCPrototype_AbsorberThickness"/>
-    <constant name="ZDCPrototype_Layer_NSteelRepeat" value="20"/>
-
-    <constant name="ZDCPrototype_width" value= "25*cm"/>
-    <constant name="ZDCPrototype_height" value= "25*cm"/>
-    <constant name="ZDCPrototype_length" value= "ZDCPrototype_SingleLayerThickness*ZDCPrototype_Layer_NSteelRepeat +
-           ZDCPrototype_BackplateThickness"/>
     <constant name="ZDCPrototype_rotateX_angle" value="0*deg"/>
     <constant name="ZDCPrototype_rotateY_angle" value="0*deg"/>
     <constant name="ZDCPrototype_rotateZ_angle" value="0*deg"/>
@@ -106,7 +119,7 @@
     
     <constant name="ZDCPrototype_x_pos" value="0*m"/>
     <constant name="ZDCPrototype_y_pos" value="0*m" />
-    <constant name="ZDCPrototype_z_pos_front_face" value="1*m"/>
+    <constant name="ZDCPrototype_z_pos_front_face" value="5*m"/>
     <constant name="ZDCPrototype_z_pos" value="ZDCPrototype_z_pos_front_face + ZDCPrototype_length/2.0"/>
   </define>
 
@@ -118,6 +131,31 @@
       ESR foil (front and back of scintillator), a PCB, and an aluminum scintillator cover
 
     </documentation>
+
+    <detector
+      id="0"
+      name="Trigger Tile"
+      type="ZeroDegreeCalorimeterSiPMonTile"
+      readout="TriggerHits"
+      vis="InvisibleWithDaughters"
+    >
+      <position x="ZDCPrototype_x_pos"         y="ZDCPrototype_y_pos"         z="ZDCPrototype_z_pos_front_face-16.775*mm"/>
+      <rotation x="ZDCPrototype_rotateX_angle" y="ZDCPrototype_rotateY_angle" z="ZDCPrototype_rotateZ_angle"/>
+      <dimensions
+        x="10.6*mm"
+        y="50.0*mm"
+        z="33.55*mm"
+      />
+      <comment> Slices will be ordered according to the slice order listed here </comment>
+      <comment> Steel/Sc layers </comment>
+      <layer repeat="1" thickness="33.55*mm" width="10.6*mm" height="50.0*mm" >
+        <slice name="Scintillator_slice" material="Polystyrene" thickness="3.55*mm" vis="AnlOrange" sensitive="true" width="10.6*mm" height="50.0*mm" x_offset="0*cm" y_offset="0*cm"/>
+        <slice name="Vacuum" material="Vacuum" thickness="11.45*mm"  width="10.6*mm" height="50.0*mm" x_offset="0*cm" y_offset="0*cm"/>
+        <slice name="Scintillator_slice" material="Polystyrene" thickness="3.55*mm" vis="AnlOrange" sensitive="true" width="10.6*mm" height="50.0*mm" x_offset="0*cm" y_offset="0*cm"/>
+        <slice name="Vacuum" material="Vacuum" thickness="15.0*mm"  width="10.6*mm" height="50.0*mm" x_offset="0*cm" y_offset="0*cm"/>
+      </layer>
+    </detector>
+    
     <detector
       id="1"
       name="ZDCPrototype"
@@ -134,19 +172,22 @@
       />
       <comment> Slices will be ordered according to the slice order listed here </comment>
       <comment> Steel/Sc layers </comment>
-      <layer repeat="ZDCPrototype_Layer_NSteelRepeat" thickness="ZDCPrototype_SingleLayerThickness" vis="InvisibleWithDaughters">
-        <slice name="Absorber_slice" material="Steel235" thickness="ZDCPrototype_AbsorberThickness" vis="AnlGray"/>
-        <slice name="Air_slice" material="Air" thickness="ZDCPrototype_AirThickness"/>
-        <slice name="ScintCover_slice" material="Aluminum" thickness="ZDCPrototype_ScintillatorCoverThickness"/>
-        <slice name="ESRFoil_slice" material="Polystyrene" thickness="ZDCPrototype_ESRFoilThickness"/>
-        <slice name="Scintillator_slice" material="Polystyrene" thickness="ZDCPrototype_PolystyreneThickness" vis="AnlOrange" sensitive="true"/>
-        <slice name="ESRFoil_slice" material="Polystyrene" thickness="ZDCPrototype_ESRFoilThickness"/>
-        <slice name="PCB_slice" material="Fr4" thickness="ZDCPrototype_PCBThickness"/>
-        <slice name="Air_slice" material="Air" thickness="ZDCPrototype_AirThickness"/>
+      <layer repeat="1" thickness="ZDCPrototype_FrontFace" width="ZDCPrototype_width" height="ZDCPrototype_height" >
+        <slice name="ESRFoil_slice" material="Polystyrene" thickness="ZDCPrototype_ESRFoilThickness" width="ZDCPrototype_PolystyreneWidth" height="ZDCPrototype_PolystyreneHeight" x_offset="1.22*cm" y_offset="1.22*cm"/>
+        <slice name="Scintillator_slice" material="Polystyrene" thickness="ZDCPrototype_PolystyreneThickness" vis="AnlOrange" sensitive="true" width="ZDCPrototype_PolystyreneWidth" height="ZDCPrototype_PolystyreneHeight" x_offset="1.22*cm" y_offset="1.22*cm"/>
+        <slice name="ESRFoil_slice" material="Polystyrene" thickness="ZDCPrototype_ESRFoilThickness" width="ZDCPrototype_PolystyreneWidth" height="ZDCPrototype_PolystyreneHeight" x_offset="1.22*cm" y_offset="1.22*cm"/>
+        <slice name="PCB_slice" material="Fr4" thickness="ZDCPrototype_PCBThickness"  width="ZDCPrototype_PolystyreneWidth" height="ZDCPrototype_PolystyreneHeight" x_offset="1.22*cm" y_offset="1.22*cm"/>
+      </layer>
+      <layer repeat="ZDCPrototype_Layer_NSteelRepeat" thickness="ZDCPrototype_SingleLayerThickness" vis="InvisibleWithDaughters" width="ZDCPrototype_width" height="ZDCPrototype_height">
+        <slice name="Absorber_slice" material="Steel235" thickness="ZDCPrototype_AbsorberThickness" width="ZDCPrototype_width" height="ZDCPrototype_height" vis="AnlGray" x_offset="0*cm" y_offset="0*cm"/>
+        <slice name="ESRFoil_slice" material="Polystyrene" thickness="ZDCPrototype_ESRFoilThickness" width="ZDCPrototype_PolystyreneWidth" height="ZDCPrototype_PolystyreneHeight" x_offset="1.22*cm" y_offset="1.22*cm"/>
+        <slice name="Scintillator_slice" material="Polystyrene" thickness="ZDCPrototype_PolystyreneThickness" vis="AnlOrange" sensitive="true" width="ZDCPrototype_PolystyreneWidth" height="ZDCPrototype_PolystyreneHeight" x_offset="1.22*cm" y_offset="1.22*cm"/>
+        <slice name="ESRFoil_slice" material="Polystyrene" thickness="ZDCPrototype_ESRFoilThickness" width="ZDCPrototype_PolystyreneWidth" height="ZDCPrototype_PolystyreneHeight" x_offset="1.22*cm" y_offset="1.22*cm"/>
+        <slice name="PCB_slice" material="Fr4" thickness="ZDCPrototype_PCBThickness" width="ZDCPrototype_PolystyreneWidth" height="ZDCPrototype_PolystyreneHeight" x_offset="1.22*cm" y_offset="1.22*cm"/>
       </layer>
       <comment> Final layer of steel </comment>
-      <layer repeat="1" thickness="ZDCPrototype_BackplateThickness">
-        <slice name="Absorber_slice" material="Steel235" thickness="ZDCPrototype_BackplateThickness" vis="AnlGray"/>
+      <layer repeat="1" thickness="ZDCPrototype_BackplateThickness" width="ZDCPrototype_width" height="ZDCPrototype_height">
+        <slice name="Absorber_slice" material="Steel235" thickness="ZDCPrototype_BackplateThickness" width="ZDCPrototype_width" height="ZDCPrototype_height" vis="AnlGray" x_offset="0*cm" y_offset="0*cm"/>
       </layer>
     </detector>
   </detectors>
@@ -154,11 +195,17 @@
   <readouts>
     <readout name="HcalFarForwardZDCHits">
       <segmentation
-        type="CartesianGridXYStaggered"
-        grid_size_x="5*cm"
-        grid_size_y="5*cm"
-        stagger_x="1"
-        stagger_y="1"
+        type="CartesianGridXY"
+        grid_size_x="4.88*cm"
+        grid_size_y="4.88*cm"
+        />
+      <id>system:8,layer:8,slice:5,x:32:-16,y:-16</id>
+    </readout>
+    <readout name="TriggerHits">
+      <segmentation
+        type="CartesianGridXY"
+        grid_size_x="10.6*mm"
+        grid_size_y="50.0*mm"
         />
       <id>system:8,layer:8,slice:5,x:32:-16,y:-16</id>
     </readout>

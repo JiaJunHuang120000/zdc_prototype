@@ -22,7 +22,6 @@ static Ref_t createDetector(Detector& desc, xml_h handle, SensitiveDetector sens
   double width  = dim.x(); // Size along x-axis
   double height = dim.y(); // Size along y-axis
   double length = dim.z(); // Size along z-axis
-  std::cout << width << " " << height << " " << length << std::endl;
   xml_dim_t pos = detElem.position(); // Position in global coordinates
   xml_dim_t rot = detElem.rotation();
 
@@ -47,12 +46,14 @@ static Ref_t createDetector(Detector& desc, xml_h handle, SensitiveDetector sens
     xml_comp_t x_layer     = c;
     int repeat             = x_layer.repeat();
     double layer_thickness = x_layer.thickness();
+    double layer_width     = x_layer.width();
+    double layer_height    = x_layer.height();
 
     // Looping through the number of repeated layers in each section
     for (int i = 0; i < repeat; i++) {
       std::string layer_name = detName + _toString(layer_num, "_layer%d");
 
-      Box layer(width / 2., height / 2., layer_thickness / 2.);
+      Box layer(layer_width / 2., layer_height / 2., layer_thickness / 2.);
 
       Volume layer_vol(layer_name, layer, air);
 
@@ -66,8 +67,21 @@ static Ref_t createDetector(Detector& desc, xml_h handle, SensitiveDetector sens
         std::string slice_name = layer_name + _toString(slice_num, "slice%d");
         Material slice_mat     = desc.material(x_slice.materialStr());
         slice_z += slice_thickness / 2.; // Going to slice halfway point
-
-        Box slice(width / 2., height / 2., slice_thickness / 2.);
+        
+        double slice_width     = x_slice.width();
+        double slice_height    = x_slice.height();
+        double x_offset, y_offset;
+        if ((layer_num-1)%2==0)
+        {
+          x_offset = -1*x_slice.x_offset();
+          y_offset = -1*x_slice.y_offset();
+        }
+        else
+        {
+          x_offset = x_slice.x_offset();
+          y_offset = x_slice.y_offset();
+        }
+        Box slice(slice_width / 2., slice_height / 2., slice_thickness / 2.);
 
         Volume slice_vol(slice_name, slice, slice_mat);
 
@@ -82,7 +96,7 @@ static Ref_t createDetector(Detector& desc, xml_h handle, SensitiveDetector sens
 
         // Placing slice within layer
         pv = layer_vol.placeVolume(slice_vol,
-                                   Transform3D(RotationZYX(0, 0, 0), Position(0., 0., slice_z)));
+                                   Transform3D(RotationZYX(0, 0, 0), Position(x_offset, y_offset, slice_z)));
         pv.addPhysVolID("slice", slice_num);
         slice_z += slice_thickness / 2.;
         z_distance_traversed += slice_thickness;
