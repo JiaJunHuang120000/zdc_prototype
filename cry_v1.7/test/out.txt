@@ -1,0 +1,29 @@
+CRY::CRYSetup: Setting returnNeutrons to 1
+CRY::CRYSetup: Setting returnProtons to 1
+CRY::CRYSetup: Setting returnGammas to 1
+CRY::CRYSetup: Setting date to 7-1-2012 (month-day-year)
+CRY::CRYSetup: Setting latitude to 90
+CRY::CRYSetup: Setting altitude to 0
+CRY::CRYSetup: Setting subboxLength to 100
+Event: 0
+Secondary 0 muon ke=1413.5 (x,y,z)= 13.1664 -49.2707 0 (m)
+Event: 1
+Secondary 0 gamma ke=4.7737 (x,y,z)= -39.5969 -5.85462 0 (m)
+Event: 2
+Secondary 0 gamma ke=5.30097 (x,y,z)= -10.4138 44.0065 0 (m)
+Event: 3
+Secondary 0 gamma ke=21.2691 (x,y,z)= 35.2818 0.437914 0 (m)
+Event: 4
+Secondary 0 gamma ke=2.12709 (x,y,z)= -6.26659 -33.9727 0 (m)
+Event: 5
+Secondary 0 gamma ke=2.30727 (x,y,z)= -32.5536 -40.6924 0 (m)
+Event: 6
+Secondary 0 gamma ke=36.0666 (x,y,z)= 39.0171 -21.9277 0 (m)
+Event: 7
+Secondary 0 muon ke=2291.12 (x,y,z)= -6.37951 -37.4088 0 (m)
+Event: 8
+Secondary 0 electron ke=36.6836 (x,y,z)= -25.4799 26.7524 0 (m)
+Event: 9
+Secondary 0 gamma ke=1.02865 (x,y,z)= 49.8749 3.95953 0 (m)
+Run completed.
+Total time simulated: 3.86157e-06 seconds
